@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+	<head>
+		<title>Лабораторная работа #4</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/my.css" />
+		<script src="scripts/jquery-3.3.1.min.js"></script>
+		<script src="scripts/my.js"></script>
+	</head>
+
+	<body>
+		<header>
+			<nav class="navbar navbar-dark bg-dark">
+  				<span class="navbar-brand mb-0 h1">Интернет-магазин</span>
+			</nav>
+		</header>
+
+		<main class="container">
+			<div class="row">
+				<div class="col-3">
+					<h3>Добавить товар</h3>
+					<form id="price-list-updater">
+						<div class="form-group">
+							<label>Наименование товара</label>
+							<input type="text" class="form-control" name="item-name" placeholder="Наименование" />
+						</div>
+						<div class="form-group">
+							<label>Стоимость товара</label>
+							<input type="text" class="form-control" name="item-value" placeholder="Стоимость" />
+						</div>
+						<button type="button" onclick="AddToPriceList();" class="btn btn-primary">Добавить</button>
+					</form>
+				</div>
+				<div class="col-9">
+					<!-- PRICE LIST -->
+					<h1>Прайс-лист</h1>
+
+					<script>
+										
+					</script>
+
+					<table id="price-list-table" class="table">
+						<thead class="thead-dark">
+							<tr>
+								<th>Наименование товара</th>
+								<th>Стоимость</th>
+							</tr>
+						</thead>
+
+						<tbody>
+							<tr>
+								<td class="price-item-name">Nvidia GeForce GTX 1080 Ti</td>
+								<td class="price-item-value">62499 &#8381;</td>
+							</tr>
+							<tr>
+								<td class="price-item-name">AMD Radeon RX VEGA</td>
+								<td class="price-item-value">60499 &#8381;</td>
+							</tr>
+							<tr>
+								<td class="price-item-name">Nvidia GeForce GTX 1070</td>
+								<td class="price-item-value">41499 &#8381;</td>
+							</tr>
+						</tbody>
+					</table>
+					
+					<br />
+					<br />
+					<!-- CART -->
+					<h1>Корзина</h1>
+					<table id="price-list-cart" class="table">
+						<thead class="thead-dark">
+							<tr>
+								<th>Наименование товара</th>
+								<th>Стоимость</th>
+								<th>Количество</th>
+								<th>&nbsp;</th>
+							</tr>
+						</thead>
+
+						<tbody>
+							
+						</tbody>
+					</table>
+
+					<button type="button" onclick="ClearCart()" class="btn btn-outline-danger">Очистить корзину</button>
+					<button type="button" onclick="CalculateSum()" class="btn btn-primary">Рассчитать стоимость</button>
+
+					<br /><br />
+
+				</div>
+			</div>
+		</main>
+	</body>
+
+</html>
